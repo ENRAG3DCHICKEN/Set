@@ -9,12 +9,18 @@
 /* Begin PBXBuildFile section */
 		730539F924E6FD13006032B9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730539F824E6FD13006032B9 /* AppDelegate.swift */; };
 		730539FB24E6FD13006032B9 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730539FA24E6FD13006032B9 /* SceneDelegate.swift */; };
-		730539FD24E6FD13006032B9 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730539FC24E6FD13006032B9 /* ContentView.swift */; };
+		730539FD24E6FD13006032B9 /* SetCardGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 730539FC24E6FD13006032B9 /* SetCardGameView.swift */; };
 		730539FF24E6FD1A006032B9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 730539FE24E6FD1A006032B9 /* Assets.xcassets */; };
 		73053A0224E6FD1A006032B9 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 73053A0124E6FD1A006032B9 /* Preview Assets.xcassets */; };
 		73053A0524E6FD1A006032B9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 73053A0324E6FD1A006032B9 /* LaunchScreen.storyboard */; };
 		73053A1024E6FD1A006032B9 /* NewSetCardGameTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73053A0F24E6FD1A006032B9 /* NewSetCardGameTests.swift */; };
 		73053A1B24E6FD1A006032B9 /* NewSetCardGameUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73053A1A24E6FD1A006032B9 /* NewSetCardGameUITests.swift */; };
+		73053A2924E6FD3C006032B9 /* Cardify.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73053A2824E6FD3C006032B9 /* Cardify.swift */; };
+		73053A2B24E6FD4E006032B9 /* Grid.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73053A2A24E6FD4E006032B9 /* Grid.swift */; };
+		73053A2D24E6FD68006032B9 /* Array+Identifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73053A2C24E6FD68006032B9 /* Array+Identifiable.swift */; };
+		73053A2F24E6FD7C006032B9 /* GridLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73053A2E24E6FD7C006032B9 /* GridLayout.swift */; };
+		73053A3124E6FD9D006032B9 /* SetCardGameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73053A3024E6FD9D006032B9 /* SetCardGameViewModel.swift */; };
+		73053A3324E6FDB6006032B9 /* SetCardGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73053A3224E6FDB6006032B9 /* SetCardGame.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,20 +41,26 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		730539F524E6FD13006032B9 /* NewSetCardGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NewSetCardGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		730539F524E6FD13006032B9 /* SetCardGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SetCardGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		730539F824E6FD13006032B9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		730539FA24E6FD13006032B9 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		730539FC24E6FD13006032B9 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		730539FC24E6FD13006032B9 /* SetCardGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetCardGameView.swift; sourceTree = "<group>"; };
 		730539FE24E6FD1A006032B9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		73053A0124E6FD1A006032B9 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		73053A0424E6FD1A006032B9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		73053A0624E6FD1A006032B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		73053A0B24E6FD1A006032B9 /* NewSetCardGameTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NewSetCardGameTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		73053A0B24E6FD1A006032B9 /* SetCardGameTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SetCardGameTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		73053A0F24E6FD1A006032B9 /* NewSetCardGameTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewSetCardGameTests.swift; sourceTree = "<group>"; };
 		73053A1124E6FD1A006032B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		73053A1624E6FD1A006032B9 /* NewSetCardGameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = NewSetCardGameUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		73053A1624E6FD1A006032B9 /* SetCardGameUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SetCardGameUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		73053A1A24E6FD1A006032B9 /* NewSetCardGameUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewSetCardGameUITests.swift; sourceTree = "<group>"; };
 		73053A1C24E6FD1A006032B9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		73053A2824E6FD3C006032B9 /* Cardify.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Cardify.swift; sourceTree = "<group>"; };
+		73053A2A24E6FD4E006032B9 /* Grid.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Grid.swift; sourceTree = "<group>"; };
+		73053A2C24E6FD68006032B9 /* Array+Identifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Array+Identifiable.swift"; sourceTree = "<group>"; };
+		73053A2E24E6FD7C006032B9 /* GridLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridLayout.swift; sourceTree = "<group>"; };
+		73053A3024E6FD9D006032B9 /* SetCardGameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetCardGameViewModel.swift; sourceTree = "<group>"; };
+		73053A3224E6FDB6006032B9 /* SetCardGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetCardGame.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,9 +101,9 @@
 		730539F624E6FD13006032B9 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				730539F524E6FD13006032B9 /* NewSetCardGame.app */,
-				73053A0B24E6FD1A006032B9 /* NewSetCardGameTests.xctest */,
-				73053A1624E6FD1A006032B9 /* NewSetCardGameUITests.xctest */,
+				730539F524E6FD13006032B9 /* SetCardGame.app */,
+				73053A0B24E6FD1A006032B9 /* SetCardGameTests.xctest */,
+				73053A1624E6FD1A006032B9 /* SetCardGameUITests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -101,7 +113,13 @@
 			children = (
 				730539F824E6FD13006032B9 /* AppDelegate.swift */,
 				730539FA24E6FD13006032B9 /* SceneDelegate.swift */,
-				730539FC24E6FD13006032B9 /* ContentView.swift */,
+				730539FC24E6FD13006032B9 /* SetCardGameView.swift */,
+				73053A2824E6FD3C006032B9 /* Cardify.swift */,
+				73053A2A24E6FD4E006032B9 /* Grid.swift */,
+				73053A2C24E6FD68006032B9 /* Array+Identifiable.swift */,
+				73053A2E24E6FD7C006032B9 /* GridLayout.swift */,
+				73053A3024E6FD9D006032B9 /* SetCardGameViewModel.swift */,
+				73053A3224E6FDB6006032B9 /* SetCardGame.swift */,
 				730539FE24E6FD1A006032B9 /* Assets.xcassets */,
 				73053A0324E6FD1A006032B9 /* LaunchScreen.storyboard */,
 				73053A0624E6FD1A006032B9 /* Info.plist */,
@@ -139,9 +157,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		730539F424E6FD13006032B9 /* NewSetCardGame */ = {
+		730539F424E6FD13006032B9 /* SetCardGame */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 73053A1F24E6FD1A006032B9 /* Build configuration list for PBXNativeTarget "NewSetCardGame" */;
+			buildConfigurationList = 73053A1F24E6FD1A006032B9 /* Build configuration list for PBXNativeTarget "SetCardGame" */;
 			buildPhases = (
 				730539F124E6FD13006032B9 /* Sources */,
 				730539F224E6FD13006032B9 /* Frameworks */,
@@ -151,14 +169,14 @@
 			);
 			dependencies = (
 			);
-			name = NewSetCardGame;
+			name = SetCardGame;
 			productName = NewSetCardGame;
-			productReference = 730539F524E6FD13006032B9 /* NewSetCardGame.app */;
+			productReference = 730539F524E6FD13006032B9 /* SetCardGame.app */;
 			productType = "com.apple.product-type.application";
 		};
-		73053A0A24E6FD1A006032B9 /* NewSetCardGameTests */ = {
+		73053A0A24E6FD1A006032B9 /* SetCardGameTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 73053A2224E6FD1A006032B9 /* Build configuration list for PBXNativeTarget "NewSetCardGameTests" */;
+			buildConfigurationList = 73053A2224E6FD1A006032B9 /* Build configuration list for PBXNativeTarget "SetCardGameTests" */;
 			buildPhases = (
 				73053A0724E6FD1A006032B9 /* Sources */,
 				73053A0824E6FD1A006032B9 /* Frameworks */,
@@ -169,14 +187,14 @@
 			dependencies = (
 				73053A0D24E6FD1A006032B9 /* PBXTargetDependency */,
 			);
-			name = NewSetCardGameTests;
+			name = SetCardGameTests;
 			productName = NewSetCardGameTests;
-			productReference = 73053A0B24E6FD1A006032B9 /* NewSetCardGameTests.xctest */;
+			productReference = 73053A0B24E6FD1A006032B9 /* SetCardGameTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		73053A1524E6FD1A006032B9 /* NewSetCardGameUITests */ = {
+		73053A1524E6FD1A006032B9 /* SetCardGameUITests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 73053A2524E6FD1A006032B9 /* Build configuration list for PBXNativeTarget "NewSetCardGameUITests" */;
+			buildConfigurationList = 73053A2524E6FD1A006032B9 /* Build configuration list for PBXNativeTarget "SetCardGameUITests" */;
 			buildPhases = (
 				73053A1224E6FD1A006032B9 /* Sources */,
 				73053A1324E6FD1A006032B9 /* Frameworks */,
@@ -187,9 +205,9 @@
 			dependencies = (
 				73053A1824E6FD1A006032B9 /* PBXTargetDependency */,
 			);
-			name = NewSetCardGameUITests;
+			name = SetCardGameUITests;
 			productName = NewSetCardGameUITests;
-			productReference = 73053A1624E6FD1A006032B9 /* NewSetCardGameUITests.xctest */;
+			productReference = 73053A1624E6FD1A006032B9 /* SetCardGameUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
 /* End PBXNativeTarget section */
@@ -215,7 +233,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 730539F024E6FD13006032B9 /* Build configuration list for PBXProject "NewSetCardGame" */;
+			buildConfigurationList = 730539F024E6FD13006032B9 /* Build configuration list for PBXProject "SetCardGame" */;
 			compatibilityVersion = "Xcode 9.3";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -228,9 +246,9 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				730539F424E6FD13006032B9 /* NewSetCardGame */,
-				73053A0A24E6FD1A006032B9 /* NewSetCardGameTests */,
-				73053A1524E6FD1A006032B9 /* NewSetCardGameUITests */,
+				730539F424E6FD13006032B9 /* SetCardGame */,
+				73053A0A24E6FD1A006032B9 /* SetCardGameTests */,
+				73053A1524E6FD1A006032B9 /* SetCardGameUITests */,
 			);
 		};
 /* End PBXProject section */
@@ -268,8 +286,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				730539F924E6FD13006032B9 /* AppDelegate.swift in Sources */,
+				73053A3124E6FD9D006032B9 /* SetCardGameViewModel.swift in Sources */,
 				730539FB24E6FD13006032B9 /* SceneDelegate.swift in Sources */,
-				730539FD24E6FD13006032B9 /* ContentView.swift in Sources */,
+				73053A2924E6FD3C006032B9 /* Cardify.swift in Sources */,
+				73053A3324E6FDB6006032B9 /* SetCardGame.swift in Sources */,
+				73053A2B24E6FD4E006032B9 /* Grid.swift in Sources */,
+				730539FD24E6FD13006032B9 /* SetCardGameView.swift in Sources */,
+				73053A2F24E6FD7C006032B9 /* GridLayout.swift in Sources */,
+				73053A2D24E6FD68006032B9 /* Array+Identifiable.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -294,12 +318,12 @@
 /* Begin PBXTargetDependency section */
 		73053A0D24E6FD1A006032B9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 730539F424E6FD13006032B9 /* NewSetCardGame */;
+			target = 730539F424E6FD13006032B9 /* SetCardGame */;
 			targetProxy = 73053A0C24E6FD1A006032B9 /* PBXContainerItemProxy */;
 		};
 		73053A1824E6FD1A006032B9 /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 730539F424E6FD13006032B9 /* NewSetCardGame */;
+			target = 730539F424E6FD13006032B9 /* SetCardGame */;
 			targetProxy = 73053A1724E6FD1A006032B9 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -485,7 +509,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NewSetCardGame.app/NewSetCardGame";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SetCardGame.app/SetCardGame";
 			};
 			name = Debug;
 		};
@@ -506,7 +530,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/NewSetCardGame.app/NewSetCardGame";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SetCardGame.app/SetCardGame";
 			};
 			name = Release;
 		};
@@ -551,7 +575,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		730539F024E6FD13006032B9 /* Build configuration list for PBXProject "NewSetCardGame" */ = {
+		730539F024E6FD13006032B9 /* Build configuration list for PBXProject "SetCardGame" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				73053A1D24E6FD1A006032B9 /* Debug */,
@@ -560,7 +584,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		73053A1F24E6FD1A006032B9 /* Build configuration list for PBXNativeTarget "NewSetCardGame" */ = {
+		73053A1F24E6FD1A006032B9 /* Build configuration list for PBXNativeTarget "SetCardGame" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				73053A2024E6FD1A006032B9 /* Debug */,
@@ -569,7 +593,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		73053A2224E6FD1A006032B9 /* Build configuration list for PBXNativeTarget "NewSetCardGameTests" */ = {
+		73053A2224E6FD1A006032B9 /* Build configuration list for PBXNativeTarget "SetCardGameTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				73053A2324E6FD1A006032B9 /* Debug */,
@@ -578,7 +602,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		73053A2524E6FD1A006032B9 /* Build configuration list for PBXNativeTarget "NewSetCardGameUITests" */ = {
+		73053A2524E6FD1A006032B9 /* Build configuration list for PBXNativeTarget "SetCardGameUITests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				73053A2624E6FD1A006032B9 /* Debug */,
