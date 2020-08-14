@@ -29,7 +29,7 @@ struct SetCardGameView: View {
                     withAnimation(.easeInOut) {
                         self.viewModel.provideMoreCards()
                     }
-                }, label: { Text("Add Cards") })
+                }, label: { Text("Deal 3 More Cards") })
             }
         }
 
@@ -45,7 +45,7 @@ struct SetCardGameView: View {
         @ViewBuilder
         private func body(for size: CGSize) -> some View {
             Text(self.card.symbol)
-                .modifier(Cardify(isFaceUp: card.isFaceUp))
+                .modifier(Cardify())
             
         }}
     }

@@ -12,8 +12,8 @@ struct SetGame<CardContent> {
     
     private var deck: Array<Card>
     private(set) var cards: Array<Card>
-    
     private var faceUpCards: Array<Card> = []
+    
     
 
     init(SetDeck: [SetCard]) {
@@ -31,10 +31,6 @@ struct SetGame<CardContent> {
             cards.append(deck[randomInteger])
             deck.remove(at: randomInteger)
         }
-            
-            
-            
-        
     }
     
     mutating func addCards() {
@@ -48,17 +44,48 @@ struct SetGame<CardContent> {
     mutating func choose(card: Card) {
         print("card chose: \(card)")
         
-        //Determine if the card select is the first card, second card, or third card
+        // Store the Index into chosenIndex
+        let chosenIndex:Int = cards.firstIndex(matching: card)!
         
-        
-        
+        //De-Selection if count is below 3 and card is already selected
+        if faceUpCards.count != 3, cards[chosenIndex].isSelected == true {
+                cards[chosenIndex].isSelected = false
+                faceUpCards.remove(at: (cards.firstIndex(matching: card))!)
+            
+        //Selection
+        } else {
+            cards[chosenIndex].isSelected = true
+            faceUpCards.append(card)
+        }
+    
+
+        //Check for a Match if 3 Cards were Previously Chosen (and 4 is currently showing)
+        if faceUpCards.count == 4 {
+            
+            //Code based on match results
+            if true {
+                //IF MATCH
+                for i in 0..<3 {
+                    cards.remove(at: cards.firstIndex(matching: faceUpCards[i])!)
+                    faceUpCards.remove(at: 0)
+                }
+                addCards()
+                
+            } else {
+                //IF NO MATCH
+                for i in 0..<3 {
+                    cards[cards.firstIndex(matching: faceUpCards[i])!].isSelected = false
+                    faceUpCards.remove(at: 0)
+                }
+            }
+        }
     }
+    
     
     
     struct Card: Identifiable {
 
-        var isFaceUp: Bool = true
-        var isMatched: Bool = false
+        var isSelected: Bool = false
         var id: Int
         
         var number: Int?
