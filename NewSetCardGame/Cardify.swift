@@ -31,11 +31,10 @@ struct Cardify: AnimatableModifier {
                 RoundedRectangle(cornerRadius: cornerRadius).stroke(lineWidth: edgeLineWidth)
                 content
             }
+                .opacity(1)
 
-                RoundedRectangle(cornerRadius: cornerRadius).fill()
 
         }
-        
         .rotation3DEffect(Angle.degrees(rotation), axis: (0,1,0))
     }
     private let cornerRadius: CGFloat = 10.0

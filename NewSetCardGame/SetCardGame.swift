@@ -8,11 +8,13 @@
 
 import Foundation
 
-struct SetGame<CardContent> {
+struct SetGame<CardContent> where CardContent: Equatable {
     
     private var deck: Array<Card>
     private(set) var cards: Array<Card>
+    
     private var faceUpCards: Array<Card> = []
+    private var match: [Bool] = [false, false, false,false]
     
     
 
@@ -34,10 +36,12 @@ struct SetGame<CardContent> {
     }
     
     mutating func addCards() {
-        for _ in 0..<3 {
-            let randomInteger = Int.random(in: 0..<deck.count)
-            self.cards.append(deck[randomInteger])
-            self.deck.remove(at: randomInteger)
+        if deck.count >= 3 {
+            for _ in 0..<3 {
+                let randomInteger = Int.random(in: 0..<deck.count)
+                self.cards.append(deck[randomInteger])
+                self.deck.remove(at: randomInteger)
+            }
         }
     }
     
@@ -48,9 +52,9 @@ struct SetGame<CardContent> {
         let chosenIndex:Int = cards.firstIndex(matching: card)!
         
         //De-Selection if count is below 3 and card is already selected
-        if faceUpCards.count != 3, cards[chosenIndex].isSelected == true {
+        if faceUpCards.count != 3 && cards[chosenIndex].isSelected == true {
                 cards[chosenIndex].isSelected = false
-                faceUpCards.remove(at: (cards.firstIndex(matching: card))!)
+                faceUpCards.remove(at: (faceUpCards.firstIndex(matching: card))!)
             
         //Selection
         } else {
@@ -62,21 +66,50 @@ struct SetGame<CardContent> {
         //Check for a Match if 3 Cards were Previously Chosen (and 4 is currently showing)
         if faceUpCards.count == 4 {
             
+            if faceUpCards[0].number == faceUpCards[1].number && faceUpCards[1].number == faceUpCards[2].number && faceUpCards[0].number == faceUpCards[2].number ||
+                faceUpCards[0].number != faceUpCards[1].number && faceUpCards[1].number != faceUpCards[2].number && faceUpCards[0].number != faceUpCards[2].number {
+                match[0] = true
+            }
+            if faceUpCards[0].color == faceUpCards[1].color && faceUpCards[1].color == faceUpCards[2].color && faceUpCards[0].color == faceUpCards[2].color ||
+                faceUpCards[0].color != faceUpCards[1].color && faceUpCards[1].color != faceUpCards[2].color && faceUpCards[0].color != faceUpCards[2].color {
+                match[1] = true
+            }
+            if faceUpCards[0].shading == faceUpCards[1].shading && faceUpCards[1].shading == faceUpCards[2].shading && faceUpCards[0].shading == faceUpCards[2].shading ||
+                faceUpCards[0].shading != faceUpCards[1].shading && faceUpCards[1].shading != faceUpCards[2].shading && faceUpCards[0].shading != faceUpCards[2].shading {
+                match[2] = true
+            }
+            if faceUpCards[0].symbol == faceUpCards[1].symbol && faceUpCards[1].symbol == faceUpCards[2].symbol && faceUpCards[0].symbol == faceUpCards[2].symbol ||
+                faceUpCards[0].symbol != faceUpCards[1].symbol && faceUpCards[1].symbol != faceUpCards[2].symbol && faceUpCards[0].symbol != faceUpCards[2].symbol {
+                match[3] = true
+            }
+
+            
             //Code based on match results
-            if true {
+            if match[0] && match[1] && match[2] {
                 //IF MATCH
                 for i in 0..<3 {
                     cards.remove(at: cards.firstIndex(matching: faceUpCards[i])!)
+                    match[i] = false
+                }
+                
+                for _ in 0..<3 {
                     faceUpCards.remove(at: 0)
                 }
+                
                 addCards()
                 
             } else {
                 //IF NO MATCH
                 for i in 0..<3 {
                     cards[cards.firstIndex(matching: faceUpCards[i])!].isSelected = false
+                }
+                for _ in 0..<3 {
                     faceUpCards.remove(at: 0)
                 }
+                
+
+                
+                                    
             }
         }
     }

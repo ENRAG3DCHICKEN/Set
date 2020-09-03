@@ -67,5 +67,8 @@ class SetCardGame: ObservableObject {
         model.choose(card: card)
     }
     
+    func newGame() {
+        model = SetCardGame.createSetGame(SetDeck: populateSetDeck())
+    }
     
 }
