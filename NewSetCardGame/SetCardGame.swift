@@ -28,10 +28,12 @@ struct SetGame<CardContent> where CardContent: Equatable {
         }
 
         //Take the Original 12 Cards from the Deck and Transfer them to Cards Array
-        for _ in 0..<12 {
+        for counter in 0..<12 {
             let randomInteger = Int.random(in: 0..<deck.count)
             cards.append(deck[randomInteger])
             deck.remove(at: randomInteger)
+            
+            cards[counter].isOnScreen = true
         }
     }
     
@@ -41,6 +43,8 @@ struct SetGame<CardContent> where CardContent: Equatable {
                 let randomInteger = Int.random(in: 0..<deck.count)
                 self.cards.append(deck[randomInteger])
                 self.deck.remove(at: randomInteger)
+                
+                cards[(cards.count-1)].isOnScreen = true
             }
         }
     }
@@ -88,8 +92,14 @@ struct SetGame<CardContent> where CardContent: Equatable {
             if match[0] && match[1] && match[2] {
                 //IF MATCH
                 for i in 0..<3 {
-                    cards.remove(at: cards.firstIndex(matching: faceUpCards[i])!)
+//                    cards[(cards.firstIndex(matching: faceUpCards[i])!)].isOnScreen = false
+                    cards[(cards.firstIndex(matching: faceUpCards[i])!)].isMatched = true
+
                     match[i] = false
+                }
+                
+                for i in 0..<3 {
+                    cards.remove(at: cards.firstIndex(matching: faceUpCards[i])!)
                 }
                 
                 for _ in 0..<3 {
@@ -119,6 +129,8 @@ struct SetGame<CardContent> where CardContent: Equatable {
     struct Card: Identifiable {
 
         var isSelected: Bool = false
+        var isOnScreen: Bool = false
+        var isMatched: Bool = false
         var id: Int
         
         var number: Int?

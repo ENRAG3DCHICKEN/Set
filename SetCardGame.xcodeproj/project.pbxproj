@@ -21,6 +21,7 @@
 		73053A2F24E6FD7C006032B9 /* GridLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73053A2E24E6FD7C006032B9 /* GridLayout.swift */; };
 		73053A3124E6FD9D006032B9 /* SetCardGameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73053A3024E6FD9D006032B9 /* SetCardGameViewModel.swift */; };
 		73053A3324E6FDB6006032B9 /* SetCardGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = 73053A3224E6FDB6006032B9 /* SetCardGame.swift */; };
+		736A47A22503DEF40017DD78 /* Diamond.swift in Sources */ = {isa = PBXBuildFile; fileRef = 736A47A12503DEF40017DD78 /* Diamond.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +62,7 @@
 		73053A2E24E6FD7C006032B9 /* GridLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GridLayout.swift; sourceTree = "<group>"; };
 		73053A3024E6FD9D006032B9 /* SetCardGameViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetCardGameViewModel.swift; sourceTree = "<group>"; };
 		73053A3224E6FDB6006032B9 /* SetCardGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetCardGame.swift; sourceTree = "<group>"; };
+		736A47A12503DEF40017DD78 /* Diamond.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Diamond.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -114,6 +116,7 @@
 				730539F824E6FD13006032B9 /* AppDelegate.swift */,
 				730539FA24E6FD13006032B9 /* SceneDelegate.swift */,
 				730539FC24E6FD13006032B9 /* SetCardGameView.swift */,
+				736A47A12503DEF40017DD78 /* Diamond.swift */,
 				73053A2824E6FD3C006032B9 /* Cardify.swift */,
 				73053A2A24E6FD4E006032B9 /* Grid.swift */,
 				73053A2C24E6FD68006032B9 /* Array+Identifiable.swift */,
@@ -287,6 +290,7 @@
 			files = (
 				730539F924E6FD13006032B9 /* AppDelegate.swift in Sources */,
 				73053A3124E6FD9D006032B9 /* SetCardGameViewModel.swift in Sources */,
+				736A47A22503DEF40017DD78 /* Diamond.swift in Sources */,
 				730539FB24E6FD13006032B9 /* SceneDelegate.swift in Sources */,
 				73053A2924E6FD3C006032B9 /* Cardify.swift in Sources */,
 				73053A3324E6FDB6006032B9 /* SetCardGame.swift in Sources */,

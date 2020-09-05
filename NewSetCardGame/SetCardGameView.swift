@@ -19,37 +19,42 @@ struct SetCardGameView: View {
                 Text(String(viewModel.cards.count))
                 
                 Button(action: {
-                    withAnimation(.easeInOut) {
-                        self.viewModel.newGame()
-                    }
+                    self.cardsOffScreen = false
+                    self.viewModel.newGame()
                 }, label: { Text("New Game") })
+                
 
-                withAnimation {
-                    Grid(viewModel.cards) { card in
-                        CardView(card: card).onTapGesture {
+                Grid(viewModel.cards) { card in
+                    CardView(card: card)
+                        .offset((self.cardsOffScreen && card.isOnScreen && !card.isMatched) ? CGSize(width: 0, height: 0) : CGSize(width: Int.random(in:5000..<10000) * Int.random(in:2...3), height: Int.random(in:5000..<10000) * Int.random(in:2...3)))
+                        .animation(.easeInOut(duration: 2))
+                        .onAppear(perform: {
+                            self.cardsOffScreen = true
+                        })
+//                        .onDisappear(perform: {
+//                            self.cardsOffScreen = false
+//                        })
+                        .onTapGesture {
                             withAnimation(.linear(duration: 0.75)) {
                                 self.viewModel.choose(card: card)
-                            }
                         }
-                            
                     }
                 }
-                .transition(AnyTransition.offset(self.cardsOffScreen ? CGSize(width: 0, height: 0) : CGSize(width: Int.random(in:5000..<10000) * Int.random(in:-1...1), height: Int.random(in:5000..<10000) * Int.random(in:-1...1))))
 
 
-//
-//
-
+                
+                
+ 
                 Button(action: {
-                    withAnimation(.easeInOut) {
-                        self.viewModel.provideMoreCards()
-                        return self.cardsOffScreen = true
-                    }
+                    self.viewModel.provideMoreCards()
+
                 }, label: { Text("Deal 3 More Cards") })
             }
-            
+                
 
-
+//                .onDisappear(perform: {
+//                    return self.cardsOffScreen = false
+//                })
         }
 
         struct CardView: View {
